@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/models/Blog.dart';
+import 'package:flutter_blog/screens/home/components/sidebar_container.dart';
 
 import '../../constraints.dart';
 import 'components/blog_post_card.dart';
+import 'components/categories.dart';
+import 'components/recent_post_card.dart';
+import 'components/recent_posts.dart';
+import 'components/search.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,6 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
           flex: 2,
@@ -23,26 +29,14 @@ class HomeScreen extends StatelessWidget {
         SizedBox(width: kDefaultPadding),
         // Sidebar
         Expanded(
-          child: Container(
-            width: double.infinity,
-            height: 400,
-            padding: EdgeInsets.all(kDefaultPadding),
-            decoration: BoxDecoration(
-              color: kDarkColor,
-              borderRadius:
-                  BorderRadius.all(Radius.circular(kDefaultPadding / 4)),
-            ),
-            child: Column(
-              children: [
-                Text(
-                  "Search",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                )
-              ],
-            ),
+          child: Column(
+            children: [
+              Search(),
+              SizedBox(height: kDefaultPadding),
+              Categories(),
+              SizedBox(height: kDefaultPadding),
+              RecentPosts(),
+            ],
           ),
         ),
       ],

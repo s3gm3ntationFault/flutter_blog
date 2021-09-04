@@ -14,8 +14,6 @@ class SocialMedia extends StatelessWidget {
       children: [
         SvgPicture.asset("icons/linkedin.svg"),
         SizedBox(width: kDefaultPadding / 2),
-        SvgPicture.asset("icons/linkedin.svg"),
-        SizedBox(width: kDefaultPadding / 2),
         ElevatedButton(
           onPressed: () {},
           child: Text("Let's Talk"),

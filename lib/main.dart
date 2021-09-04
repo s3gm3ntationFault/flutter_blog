@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kBodyTextColor),
           bodyText2: TextStyle(color: kBodyTextColor),
           headline5: TextStyle(color: kDarkColor),
+          caption: TextStyle(color: Colors.white70),
         ),
       ),
       home: MainScreen(),
