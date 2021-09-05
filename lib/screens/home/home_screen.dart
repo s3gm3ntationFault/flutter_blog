@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/models/Blog.dart';
-import 'package:flutter_blog/screens/home/components/sidebar_container.dart';
 
 import '../../constraints.dart';
 import '../../responsive.dart';
 import 'components/blog_post_card.dart';
 import 'components/categories.dart';
-import 'components/recent_post_card.dart';
 import 'components/recent_posts.dart';
 import 'components/search.dart';
 
