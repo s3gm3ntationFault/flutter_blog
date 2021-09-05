@@ -21,7 +21,7 @@ class SideNavbar extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                     horizontal: kDefaultPadding * 3.5,
                   ),
-                  child: SvgPicture.asset("icons/logo.svg"),
+                  child: SvgPicture.asset("assets/icons/logo.svg"),
                 ),
               ),
               ...List.generate(

@@ -21,7 +21,7 @@ class Search extends StatelessWidget {
           hintStyle: Theme.of(context).textTheme.caption,
           suffixIcon: Padding(
             padding: const EdgeInsets.all(kDefaultPadding / 2),
-            child: SvgPicture.asset("icons/feather_search.svg"),
+            child: SvgPicture.asset("assets/icons/feather_search.svg"),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(

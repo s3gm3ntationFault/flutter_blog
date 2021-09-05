@@ -98,21 +98,21 @@ class BlogPostCard extends StatelessWidget {
                     IconButton(
                       onPressed: () {},
                       icon: SvgPicture.asset(
-                        "icons/feather_thumbs-up.svg",
+                        "assets/icons/feather_thumbs-up.svg",
                         color: Colors.white,
                       ),
                     ),
                     IconButton(
                       onPressed: () {},
                       icon: SvgPicture.asset(
-                        "icons/feather_message-square.svg",
+                        "assets/icons/feather_message-square.svg",
                         color: Colors.white,
                       ),
                     ),
                     IconButton(
                       onPressed: () {},
                       icon: SvgPicture.asset(
-                        "icons/feather_share-2.svg",
+                        "assets/icons/feather_share-2.svg",
                         color: Colors.white,
                       ),
                     ),

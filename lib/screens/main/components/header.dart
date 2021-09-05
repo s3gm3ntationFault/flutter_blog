@@ -37,7 +37,7 @@ class Header extends StatelessWidget {
                           },
                         ),
                       SvgPicture.asset(
-                        "icons/logo.svg",
+                        "assets/icons/logo.svg",
                         width: 35,
                       ),
                       Spacer(),

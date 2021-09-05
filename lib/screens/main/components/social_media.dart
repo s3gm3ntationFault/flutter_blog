@@ -14,7 +14,7 @@ class SocialMedia extends StatelessWidget {
     return Row(
       children: [
         if (!Responsive.isMobile(context))
-          SvgPicture.asset("icons/linkedin.svg"),
+          SvgPicture.asset("assets/icons/linkedin.svg"),
         if (!Responsive.isMobile(context)) SizedBox(width: kDefaultPadding / 2),
         ElevatedButton(
           onPressed: () {},
