@@ -27,7 +27,7 @@ class SideNavbar extends StatelessWidget {
               ...List.generate(
                 _controller.navItems.length,
                 (index) => DrawerItem(
-                  title: _controller.navItems[index],
+                  title: _controller.navItems[index].name,
                   isActive: index == _controller.selectedIndex,
                   press: () {
                     _controller.setNavIndex(index);
