@@ -3,6 +3,7 @@ import 'package:flutter_blog/models/Blog.dart';
 import 'package:flutter_blog/screens/home/components/sidebar_container.dart';
 
 import '../../constraints.dart';
+import '../../responsive.dart';
 import 'components/blog_post_card.dart';
 import 'components/categories.dart';
 import 'components/recent_post_card.dart';
@@ -28,17 +29,18 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox(width: kDefaultPadding),
         // Sidebar
-        Expanded(
-          child: Column(
-            children: [
-              Search(),
-              SizedBox(height: kDefaultPadding),
-              Categories(),
-              SizedBox(height: kDefaultPadding),
-              RecentPosts(),
-            ],
+        if (!Responsive.isMobile(context))
+          Expanded(
+            child: Column(
+              children: [
+                Search(),
+                SizedBox(height: kDefaultPadding),
+                Categories(),
+                SizedBox(height: kDefaultPadding),
+                RecentPosts(),
+              ],
+            ),
           ),
-        ),
       ],
     );
   }

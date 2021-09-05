@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/controllers/NavbarController.dart';
+import 'package:flutter_blog/responsive.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../../constraints.dart';
 import 'navbar/navbar.dart';
 import 'social_media.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
+  final NavbarController _controller = Get.put(NavbarController());
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +26,22 @@ class Header extends StatelessWidget {
                 children: [
                   Row(
                     children: [
+                      if (!Responsive.isDesktop(context))
+                        IconButton(
+                          icon: Icon(
+                            Icons.menu,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            _controller.openOrCloseDrawer();
+                          },
+                        ),
                       SvgPicture.asset(
                         "icons/logo.svg",
                         width: 35,
                       ),
                       Spacer(),
-                      Navbar(),
+                      if (Responsive.isDesktop(context)) Navbar(),
                       Spacer(),
                       // Social media
                       SocialMedia(),
@@ -75,7 +86,8 @@ class Header extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: kDefaultPadding),
+                  if (Responsive.isDesktop(context))
+                    SizedBox(height: kDefaultPadding),
                 ],
               ),
             ),
